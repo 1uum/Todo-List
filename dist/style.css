@@ -6,4 +6,231 @@ html{
 
 body{
     margin: 0;
+    background-color: #d4d4d4;
+}
+
+.container {  
+    display: grid;
+    grid-template-columns: 0.2fr 1.8fr; 
+    grid-template-rows: 0.2fr 1.8fr; 
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Header Header"
+      "navmenu container";
+}
+  
+.header{ 
+    display: grid;
+    grid-area: Header; 
+    background-color: #4a54e2;
+    width: auto;
+    height: 6em;
+    align-items: center;
+}
+
+.material-icons-outlined.md-48{
+    cursor: pointer;
+    color: #fafafa;
+    width: fit-content;
+    font-size: 48px;
+    grid-column: 2;
+    display: inline-block;
+    justify-self: end;
+    margin-right: 1em;
+    padding: 0;
+    border-radius: 25px;
+}
+
+#add-button:hover{
+    background-color: #353da7bd;
+}
+ 
+.page-title{
+    color: #fafafa;
+    font-weight: 500;
+    font-size: 2.5em;
+    margin-left: 1em;
+    grid-column: 1;
+    cursor: default;
+}
+
+.nav-menu{
+    display: grid;
+    grid-area: navmenu; 
+    justify-self: start; 
+    align-self: start; 
+    background-color: #a1a5e6;
+    width: 15em; 
+    height: 48em; 
+    box-shadow: 5px 0px 5px rgba(87, 87, 87, 0.75);
+    -webkit-box-shadow: 5px 0px 5px rgba(87, 87, 87, 0.75);
+    -moz-box-shadow: 5px 0px 5px rgba(87, 87, 87, 0.75);
+}
+
+.menu-items{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    overflow: hidden;
+    position: absolute;
+    gap: 15px;
+    padding: 0;
+}
+
+.nav-menu li{
+    color: #ffffff;
+    cursor: pointer;
+    list-style: none;
+    font-weight: 400;
+    font-size: 1.3em;
+    display: flex;
+    margin-left: 15px;
+    width: fit-content;
+}
+
+.nav-menu li:hover{
+    color: #4a54e2;
+}
+
+.nav-menu h2{
+    color: #fafafa;
+    cursor: default;
+    margin-left: 15px;
+}
+  
+.main{ 
+    display: grid;
+    grid-area: container;
+    justify-self: start;
+    align-self: start; 
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    margin-left: 8em;
+    background-color: #d4d4d4;
+    width: auto;
+}
+
+h1{
+    color: #3a3a3a;
+    cursor: default;
+}
+
+
+
+.modal-container, .modal-project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    opacity: 0;
+    background-color: #1818183f;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: 1s;
+}
+
+.modal-new-item {
+    background-color: #fafafa;
+    width: 600px;
+    max-width: 100%;
+    height: 350px;
+    padding: 30px 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.modal-new-project{
+    background-color: #fafafa;
+    width: 400px;
+    max-width: 100%;
+    height: 200px;
+    padding: 30px 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.show_modal_add, .show_modal_project{
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    width: 600px;
+    max-width: 100%;
+    justify-content: center;
+}
+
+
+.column-1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 260px;
+    max-width: 100%;
+}
+
+.column-2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 260px;
+    max-width: 100%;
+}
+
+.column-2 select, .column-2 input, .column-1 input, .column-1 textarea, .name-cont input{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid #3a3a3a;
+}
+
+.line-cont2 textarea{
+    max-width: 263px;
+    min-width: 263px;
+    max-height: 75px;
+    min-height: 75px;
+}
+
+.btn{
+    cursor: pointer;
+    padding: 10px;
+    color: #fafafa;
+    border-radius: 5px;
+    border: none;
+    box-shadow: none;
+    display: inline-block;
+    justify-items: flex-end;
+}
+
+.btn-container{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 2em;
+}
+
+#btn-add, #btn-add-project{
+    background-color: #4a54e2;
+}
+
+.btn:hover{
+    color: #3a3a3a;
+}
+
+#btn-close, #btn-close-project{
+    background-color: #e05555;
 }

@@ -5,13 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&display=swap');
-        </style> 
-    <title>My To do List</title>
+    </style> 
+    <title>My Todo List</title>
 </head>
 <body>
-    <div id="content"></div>
+    <div class="container">
+        <div class="header">
+            <div class="page-title">My Todo List</div> 
+            <span class="material-icons-outlined md-48" id="add-button"> add </span>
+        </div>
+        <div class="nav-menu">
+            <ul class="menu-items">
+                <li>My Todos</li>
+                <li>Today</li>
+                <li>This Week</li>
+                <h2>My projects</h2>
+                <li id="add-project"><span class="material-icons-outlined">add</span>New Project</li>
+            </ul>
+        </div>
+        <div class="main" id="main">
+                <h1 id = "main-display-title">My Todos</h1>
+                <div id = "main-display-render"></div>
+            </div>
+        </div>
+
+        <div class="modal-container" id="modal-container">
+            <div class="modal-new-item" >
+                <h2>New Task</h2>
+                <form action="">
+                    <div class="form-container">
+                        <div class="column-1">
+                            <div class="line-cont1"><label for="task-name">Title: <input type="text" id="task-name" required></label></div>
+                            <div class="line-cont2"><label for="task-desc">Description: <textarea id="task-desc" maxlength="80" rows="2"> </textarea></label></div>
+                        </div>
+                        <div class="column-2">
+                            <div class="line-cont3"><label for="task-date">Due Date: <input type="date" id="task-date" required></label></div>
+                            <div class="line-cont4"><label for="task-priority">Priority: <select type="custom-select" id="task-priority" required>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </label></select></div>
+                            <div class="line-cont5"><label for="task-project">Project: <select type="custom-select" id="task-project" required>
+                            <option value="my-todos">My Todos</option></label></select></div>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn" id="btn-add">Add Task</button>
+                        <button class="btn" id="btn-close">Close</button>
+                    </div>    
+                </form>
+            </div>
+        </div>
+
+        <div class="modal-project" id="modal-project">
+            <div class="modal-new-project">
+                <h2>New Project</h2>
+                <form action="">
+                    <div class="name-cont"><label for="project-name">Name Of The Project: <input type="text" id="project-name" required></label></div>
+                </form>
+                <div class="btn-container">
+                    <button class="btn" id="btn-add-project">Add Project</button>
+                    <button class="btn" id="btn-close-project">Close</button>
+                </div>   
+            </div>
+        </div>
+
     <script src="main.js"></script>
 </body>
 </html>

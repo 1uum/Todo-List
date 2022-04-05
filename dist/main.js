@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("alert(\"working\");\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
+eval("//import render from './modules/default'\n\n//document.addEventListener('DOMContentLoaded' , render.loadDefault);\n\nconst open_modal_add = document.getElementById('add-button');\nconst modal_container_add = document.getElementById('modal-container');\nconst close_modal_add = document.getElementById('btn-close');\n\nconst open_modal_project = document.getElementById('add-project');\nconst modal_container_project = document.getElementById('modal-project');\nconst close_modal_project =document.getElementById('btn-close-project');\n\nopen_modal_add.addEventListener('click', () =>{\n    modal_container_add.classList.add('show_modal_add');\n});\n\nclose_modal_add.addEventListener('click', () =>{\n    modal_container_add.classList.remove('show_modal_add');\n});\n\nopen_modal_project.addEventListener('click', () => {\n    modal_container_project.classList.add('show_modal_project');\n})\n\nclose_modal_project.addEventListener('click', () => {\n    modal_container_project.classList.remove('show_modal_project');\n})\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
 
 /***/ })
 
